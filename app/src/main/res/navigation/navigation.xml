@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/servicesFragment">
+
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="com.creativehub.petspot.feature.servicetype.ServiceTypeFragment"
+        android:label="fragment_services"
+        tools:layout="@layout/fragment_services" >
+        <action
+            android:id="@+id/actionCategoriesFragment"
+            app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/actionWorkWithUsFragment"
+            app:destination="@id/workWithUsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.creativehub.petspot.feature.category.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/actionAdsFragment"
+            app:destination="@id/adsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workWithUsFragment"
+        android:name="com.creativehub.petspot.feature.user.login.WorkWithUsFragment"
+        android:label="fragment_work_with_us"
+        tools:layout="@layout/fragment_work_with_us" >
+        <action
+            android:id="@+id/action_workWithUsFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_workWithUsFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adsFragment"
+        android:name="com.creativehub.petspot.feature.category.AdsFragment"
+        android:label="fragment_ads"
+        tools:layout="@layout/fragment_ads" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.creativehub.petspot.feature.user.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.creativehub.petspot.feature.user.profile.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" >
+        <action
+            android:id="@+id/action_userProfileFragment_to_userAdsFragment"
+            app:destination="@id/userAdsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userAdsFragment"
+        android:name="com.creativehub.petspot.feature.user.ads.CreateAdsFragment"
+        android:label="fragment_user_ads"
+        tools:layout="@layout/fragment_user_ads" />
+</navigation>
