@@ -64,12 +64,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
         public void bind(Category category) {
             binding.category.setImageDrawable(getImage(category.imageUrl));
-//            binding.category.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    //TODO:Go to ads fragment
-//                }
-//            });
+            binding.category.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //TODO:Go to ads fragment
+
+                }
+            });
         }
 
         private Drawable getImage(String imageName) {
